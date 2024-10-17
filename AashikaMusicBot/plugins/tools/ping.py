@@ -1,11 +1,11 @@
 from datetime import datetime
 from pyrogram import filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from PragyanMusic import app
-from PragyanMusic.core.call import PragyanMusic
-from PragyanMusic.utils import bot_sys_stats
-from PragyanMusic.utils.decorators.language import language
-from PragyanMusic.utils.inline import supp_markup
+from AashikaMusicBot import app
+from AashikaMusicBot.core.call import AashikaMusicBot
+from AashikaMusicBot.utils import bot_sys_stats
+from AashikaMusicBot.utils.decorators.language import language
+from AashikaMusicBot.utils.inline import supp_markup
 from config import BANNED_USERS
 import aiohttp
 import asyncio
@@ -55,7 +55,7 @@ async def ping_com(client, message: Message, _):
         await asyncio.sleep(1)
 
     start = datetime.now()
-    pytgping = await PragyanMusic.ping()
+    pytgping = await AashikaMusicBot.ping()
     UP, CPU, RAM, DISK = await bot_sys_stats()
     resp = (datetime.now() - start).microseconds / 1000
 
